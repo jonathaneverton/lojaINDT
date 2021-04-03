@@ -1,5 +1,9 @@
 <div style="width: 400px; margin: auto;">
   <div class="submit-form">
+
+    <br/>
+    <h3>{{titulo}}</h3>
+
     <div *ngIf="!submitted">
 
       <div class="form-group">
@@ -61,14 +65,16 @@
       </div>
 
       <button (click)="saveProduto()" class="btn btn-success">Salvar</button>
+      <button routerLink="/produtos"  class="btn btn-secondary ml-2" >Voltar</button>
+      <!-- <button class="badge badge-warning" routerLink="/produtos">
+        Voltar
+      </button> -->
     </div>
 
     <div *ngIf="submitted">
       <h4>Produto atualizado com sucesso!</h4>
       <!-- <button class="btn btn-success" (click)="newProduto()">Novo Produto</button> -->
-      <button class="badge badge-warning" routerLink="/produtos">
-        Voltar
-      </button>
+      <button routerLink="/produtos"  class="btn btn-secondary ml-2" >Voltar</button>
     </div>
   </div>
 </div>

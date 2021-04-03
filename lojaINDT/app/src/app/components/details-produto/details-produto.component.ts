@@ -8,6 +8,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./details-produto.component.css']
 })
 export class DetailsProdutoComponent implements OnInit {
+  public titulo:string;
+
   produto = {
     idproduto: '',
     nome: '',
@@ -23,6 +25,8 @@ export class DetailsProdutoComponent implements OnInit {
   constructor(private service: LojaService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.titulo = "Editar Produto";
+
     this.route.params.subscribe( parametros => {
       if (parametros['idproduto']) {
         this.carregaProduto(parametros['idproduto']);

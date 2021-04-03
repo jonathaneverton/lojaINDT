@@ -24,11 +24,19 @@
       <td>{{ produto.quantidade }}</td>
       <td>{{ produto.valor }}</td>
       <!-- <td><a (click)="editar(produto.idproduto);">Editar</a></td> -->
-      <a class="badge badge-warning" routerLink="/produtos/{{ produto.idproduto }}">
+      <!-- <a class="badge badge-warning" routerLink="/produtos/{{ produto.idproduto }}">
         Editar
-      </a>
+      </a> -->
 
-      <td><a (click)="excluir(produto.idproduto, i);" class="nav-link">Excluir</a></td>
+      <td>
+        <button routerLink="/produtos/{{ produto.idproduto }}" class="btn btn-secondary" >Editar</button>
+      </td>
+
+      <td>
+        <button (click)="excluir(produto.idproduto, i);" class="btn btn-danger" >Excluir</button>
+      </td>
+
+      <!-- <td><a (click)="excluir(produto.idproduto, i);" class="nav-link">Excluir</a></td> -->
     </tr>
     <tr>
         <td colspan="7" style="text-align: right;">Total de Registros: {{ produtos.length }}</td>
