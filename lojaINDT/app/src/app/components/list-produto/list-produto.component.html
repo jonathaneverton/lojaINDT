@@ -1,0 +1,33 @@
+<table>
+  <thead>
+  <tr>
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Quantidade</th>
+      <th>Valor</th>
+      <th>Editar</th>
+      <th>Excluir</th>
+  </tr>
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let produto of produtos; let i = index;">
+      <td>{{ produto.idproduto }}</td>
+      <td>{{ produto.nome }}</td>
+      <td>{{ produto.descricao }}</td>
+      <td>{{ produto.quantidade }}</td>
+      <td>{{ produto.valor }}</td>
+      <!-- <td><a (click)="editar(produto.idproduto);">Editar</a></td> -->
+      <a class="badge badge-warning" routerLink="/produtos/{{ produto.idproduto }}">
+        Editar
+      </a>
+
+      <td><a (click)="excluir(produto.idproduto, i);" class="nav-link">Excluir</a></td>
+      </tr>
+      <tr>
+         <td colspan="6" style="text-align: right;">Total de Registros: {{ produtos.length }}</td>
+      </tr>
+  </tbody>
+
+</table>
