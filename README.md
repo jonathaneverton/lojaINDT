@@ -6,6 +6,12 @@ Desenvolver uma aplicação WEB, RESTFULL para uma loja virtual.
 Desenvolver API em JAVA - SPRING BOOT
 Desenvolver em Angular
 
+### Tecnologias Utilizadas
+Spring Boot
+Git
+Angular
+MySql
+
 ###
 Baixe o projeto em: https://github.com/jonathaneverton/lojaINDT.git
 
