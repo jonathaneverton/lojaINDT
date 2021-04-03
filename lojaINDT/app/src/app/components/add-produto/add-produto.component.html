@@ -1,11 +1,14 @@
 <div style="width: 400px; margin: auto;">
   <div class="submit-form">
+
+    <br/>
+    <h3>{{titulo}}</h3>
+
     <div *ngIf="!submitted">
       <div class="form-group">
         <label for="nome">Nome</label>
         <input
-          type="text"
-          class="form-control"
+          type="input"
           id="nome"
           required
           [(ngModel)]="produto.nome"
@@ -47,6 +50,8 @@
       </div>
 
       <button (click)="saveProduto()" class="btn btn-success">Salvar</button>
+      <button [routerLink]="['../']" type="button" class="btn btn-primary-outline pull-right">Voltar</button>
+
     </div>
 
     <div *ngIf="submitted">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LojaService } from 'src/app/services/loja.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-produto',
@@ -7,6 +8,8 @@ import { LojaService } from 'src/app/services/loja.service';
   styleUrls: ['./add-produto.component.css'],
 })
 export class AddProdutoComponent implements OnInit {
+  public titulo:string;
+
   produto = {
     nome: '',
     descricao: '',
@@ -15,9 +18,11 @@ export class AddProdutoComponent implements OnInit {
   };
   submitted = false;
 
-  constructor(private service: LojaService) {}
+  constructor(private service: LojaService, private activatedRoute: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.titulo = "Novo Produto";
+  }
 
   saveProduto(): void {
     const data = {
@@ -47,4 +52,5 @@ export class AddProdutoComponent implements OnInit {
       valor: ''
     };
   }
+
 }

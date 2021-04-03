@@ -65,7 +65,10 @@
 
     <div *ngIf="submitted">
       <h4>Produto atualizado com sucesso!</h4>
-      <button class="btn btn-success" (click)="newProduto()">Novo Produto</button>
+      <!-- <button class="btn btn-success" (click)="newProduto()">Novo Produto</button> -->
+      <button class="badge badge-warning" routerLink="/produtos">
+        Voltar
+      </button>
     </div>
   </div>
 </div>

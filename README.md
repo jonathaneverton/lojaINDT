@@ -11,12 +11,13 @@ Baixe o projeto em: https://github.com/jonathaneverton/lojaINDT.git
 
 ## Para rodar a aplicação:
 
-1) Entre na pasta da aplicação em "lojaINDT"
+1) Entre na pasta da aplicação em "lojaINDT/app"
 2) Digite o comando: ng serve --open
 
 ## Para rodar a API:
 
-./mvnw spring-boot:run
+1) Entre na pasta da aplicação em "loja-service"
+2) Digite o comando: ./mvnw spring-boot:run
 
 
 

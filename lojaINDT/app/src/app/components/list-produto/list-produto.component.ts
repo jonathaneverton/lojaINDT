@@ -11,10 +11,13 @@ export class ListProdutoComponent implements OnInit {
   currentProduto = null;
   currentIndex = -1;
   nome = '';
+  public titulo:string;
 
   constructor(private service: LojaService) {}
 
   ngOnInit(): void {
+    /*SETA O TÍTULO */
+    this.titulo = "Lista de Produtos";
     this.retrieveProduto();
   }
 

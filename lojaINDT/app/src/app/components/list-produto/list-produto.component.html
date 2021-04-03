@@ -1,3 +1,8 @@
+<br/>
+<br/>
+
+<h3>{{titulo}}</h3>
+
 <table>
   <thead>
   <tr>
@@ -12,7 +17,7 @@
   </thead>
 
   <tbody>
-      <tr *ngFor="let produto of produtos; let i = index;">
+    <tr *ngFor="let produto of produtos; let i = index;">
       <td>{{ produto.idproduto }}</td>
       <td>{{ produto.nome }}</td>
       <td>{{ produto.descricao }}</td>
@@ -24,10 +29,10 @@
       </a>
 
       <td><a (click)="excluir(produto.idproduto, i);" class="nav-link">Excluir</a></td>
-      </tr>
-      <tr>
-         <td colspan="6" style="text-align: right;">Total de Registros: {{ produtos.length }}</td>
-      </tr>
+    </tr>
+    <tr>
+        <td colspan="7" style="text-align: right;">Total de Registros: {{ produtos.length }}</td>
+    </tr>
   </tbody>
 
 </table>
