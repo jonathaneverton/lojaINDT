@@ -25,4 +25,7 @@ export class LojaService {
   delete(idproduto): Observable<any> {
     return this.http.delete(`${baseUrl}/${idproduto}`);
   }
+
+
+
 }
